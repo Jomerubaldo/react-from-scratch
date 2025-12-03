@@ -3,8 +3,9 @@ import { Container } from './components/Container';
 import { Header } from './components/Header';
 import { Search } from './components/Search';
 import { Shortlist } from './components/Shortlist';
-import { Doggylist } from './components/Doggylist';
-import { DoggyForm } from './components/DoggyForm';
+import { Doggieslist } from './components/Doggieslist';
+import { DoggiesForm } from './components/DoggyForm';
+import { doggies } from './data/doggies';
 
 export default function App() {
   return (
@@ -28,9 +29,12 @@ function Main() {
         <Shortlist />
       </div>
       {/* Dogs list */}
-      <Doggylist />
+      {/* doggies data */}
+      {/* in Doggieslist component need props to recieve it data */}
+      {/* but need destructuring props to readable */}
+      <Doggieslist doggies={doggies} />
       {/* Dog Form */}
-      <DoggyForm />
+      <DoggiesForm />
     </main>
   );
 }

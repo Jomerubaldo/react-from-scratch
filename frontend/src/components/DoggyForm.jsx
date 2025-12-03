@@ -1,4 +1,4 @@
-export function DoggyForm() {
+export function DoggiesForm() {
   return (
     <div className="mt-12 flex items-center justify-between bg-white p-8 shadow ring ring-black/35">
       <form className="mt-4 flex w-full flex-col items-start gap-4">
