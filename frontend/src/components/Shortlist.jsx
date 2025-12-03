@@ -1,5 +1,5 @@
-import buranday from '../../public/Shih Tzu Puppy Pictures and Facts.jpg';
-import kulit from '../../public/She Grew Old In A Shelter Waiting For A Family — Then Everything Changed.jpg';
+import Beagle from '../../public/Beagle.jpg';
+import Bichon from '../../public/Bichon.jpg';
 
 export function Shortlist() {
   return (
@@ -12,9 +12,9 @@ export function Shortlist() {
             width={32}
             alt="Buranday"
             className="aspect-square w-8 object-cover"
-            src={buranday}
+            src={Bichon}
           />
-          <p className="px-3 text-sm text-slate-800">Buranday</p>
+          <p className="px-3 text-sm text-slate-800">Bichon</p>
           <button className="group h-full border border-slate-100 px-2 hover:bg-slate-100">
             x
           </button>
@@ -25,9 +25,9 @@ export function Shortlist() {
             width={32}
             alt="Kulit"
             className="aspect-square w-8 object-cover"
-            src={kulit}
+            src={Beagle}
           />
-          <p className="px-3 text-sm text-slate-800">Kulit</p>
+          <p className="px-3 text-sm text-slate-800">Beagle</p>
           <button className="group h-full border border-slate-100 px-2 hover:bg-slate-100">
             x
           </button>
