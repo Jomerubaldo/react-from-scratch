@@ -21,7 +21,6 @@ export default function App() {
 function Main() {
   return (
     <main>
-      {/* Search & Shortlist */}
       <div className="mt-24 grid gap-8 sm:grid-cols-2">
         {/* Search Component */}
         <Search />

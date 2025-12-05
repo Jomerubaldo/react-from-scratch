@@ -1,5 +1,5 @@
-import Beagle from '../../public/Beagle.jpg';
-import Bichon from '../../public/Bichon.jpg';
+import Beagle from '../assets/Beagle.jpg';
+import Bichon from '../assets/Bichon.jpg';
 
 export function Shortlist() {
   return (

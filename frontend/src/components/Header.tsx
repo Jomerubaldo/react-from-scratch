@@ -1,4 +1,4 @@
-import doggyLogo from '../../public/dog_logo.png';
+import doggyLogo from '../../src/assets/dog_logo.png';
 
 // Header Component
 export function Header() {

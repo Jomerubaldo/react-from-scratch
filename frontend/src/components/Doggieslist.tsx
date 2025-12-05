@@ -1,5 +1,9 @@
+// import type from types folder to used the type for this component
+import { type Doggy } from '../types/index';
+
 // need pass props to render the data
-export function Doggieslist({ doggies }) {
+//called type annotation here but different syntax
+export function Doggieslist({ doggies }: { doggies: Doggy[] }) {
   return (
     <ul className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {/* iterating using map() like dito niya ibabato yung data */}
@@ -10,7 +14,14 @@ export function Doggieslist({ doggies }) {
   );
 }
 
-function DoggyCard({ doggy }) {
+// type annotation
+// make doggy name props and Doggy we export earlier but its have allready types value
+type DoggyCardProps = {
+  doggy: Doggy; //resuasble Doggy
+};
+
+// called DoggyCardProps
+function DoggyCard({ doggy }: DoggyCardProps) {
   return (
     <li
       key={doggy.id}
@@ -40,7 +51,7 @@ function DoggyCard({ doggy }) {
             strokeLinejoin="round"
             className={
               doggy.id === 2
-                ? 'fill-red-500 stroke-none'
+                ? 'fill-red-500 stroke-none' //ternary operator
                 : 'stroke-slate-200 group-hover:stroke-slate-300'
             }
           >

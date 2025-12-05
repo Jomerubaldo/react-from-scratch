@@ -1,12 +1,13 @@
-import Akita from '../../public/Akita.jpg';
-import Alaskan from '../../public/Alaskan.jpg';
-import Affenpinscher from '../../public/Affenpinscher.jpg';
-import Beagle from '../../public/Beagle.jpg';
-import Bichon from '../../public/Bichon.jpg';
-import Bloodhound from '../../public/Bloodhound.jpg';
+import Akita from '../assets/Akita.jpg';
+import Alaskan from '../assets/Alaskan.jpg';
+import Affenpinscher from '../assets/Affenpinscher.jpg';
+import Beagle from '../assets/Beagle.jpg';
+import Bichon from '../assets/Bichon.jpg';
+import Bloodhound from '../assets/Bloodhound.jpg';
+import { type Doggy } from '../types/index';
 
 // array of objects iterating data
-export const doggies = [
+export const doggies: Doggy[] = [
   {
     id: 1,
     name: 'Akita',
