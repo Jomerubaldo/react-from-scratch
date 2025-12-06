@@ -6,6 +6,8 @@ import { Shortlist } from './components/Shortlist';
 import { Doggieslist } from './components/Doggieslist';
 import { DoggiesForm } from './components/DoggyForm';
 import { doggies } from './data/doggies';
+import { useState } from 'react';
+import { Doggy } from './types';
 
 export default function App() {
   return (
@@ -19,20 +21,15 @@ export default function App() {
 }
 
 function Main() {
+  const [liked, setLiked] = useState<Doggy['id'][]>([1, 3]);
+
   return (
     <main>
       <div className="mt-24 grid gap-8 sm:grid-cols-2">
-        {/* Search Component */}
         <Search />
-        {/* Shortlist */}
         <Shortlist />
       </div>
-      {/* Dogs list */}
-      {/* doggies data */}
-      {/* in Doggieslist component need props to recieve it data */}
-      {/* but need destructuring props to readable */}
-      <Doggieslist doggies={doggies} />
-      {/* Dog Form */}
+      <Doggieslist doggies={doggies} liked={liked} setLiked={setLiked} />
       <DoggiesForm />
     </main>
   );
