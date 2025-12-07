@@ -6,11 +6,11 @@ export function Header() {
     <header>
       {/* Logo */}
       <a className="group" href="/">
-        <div className="inline-flex items-center gap-4">
+        <div className="inline-flex items-center gap-2">
           <img
             src={doggyLogo}
             alt="doggyLogo"
-            className="h-16 transition group-hover:scale-105 group-hover:rotate-6 md:h-20 lg:h-24"
+            className="h-16 transition group-hover:scale-105 group-hover:rotate-6 md:h-20 lg:h-24 border bg-green-500 rounded-full"
           />
           <p className="text-lg font-semibold">Doggy</p>
         </div>
