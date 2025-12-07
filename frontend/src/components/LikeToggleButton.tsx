@@ -10,7 +10,7 @@ export function LikeToggleButton({
   id: Doggy['id'];
   liked: Doggy['id'][];
   setLiked: Dispatch<SetStateAction<Doggy['id'][]>>;
-}) {    
+}) {
   return (
     <button
       className="group"

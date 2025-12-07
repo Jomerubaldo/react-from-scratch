@@ -27,7 +27,7 @@ function Main() {
     <main>
       <div className="mt-24 grid gap-8 sm:grid-cols-2">
         <Search />
-        <Shortlist />
+        <Shortlist liked={liked} setLiked={setLiked} doggies={doggies} />
       </div>
       <Doggieslist doggies={doggies} liked={liked} setLiked={setLiked} />
       <DoggiesForm />

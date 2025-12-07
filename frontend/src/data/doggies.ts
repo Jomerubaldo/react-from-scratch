@@ -6,6 +6,7 @@ import Bichon from '../assets/Bichon.jpg';
 import Bloodhound from '../assets/Bloodhound.jpg';
 import { type Doggy } from '../types/index';
 
+// static data
 // array of objects iterating data
 export const doggies: Doggy[] = [
   {
