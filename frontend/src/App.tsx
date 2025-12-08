@@ -8,7 +8,7 @@ import { DoggiesForm } from './components/DoggyForm';
 import { doggies } from './data/doggies';
 import { useState } from 'react';
 import { Doggy } from './types';
-import { LikedContext } from './context/likedContext';
+import { LikedContext } from './context/LikedContext';
 
 export default function App() {
   return (
@@ -23,15 +23,16 @@ export default function App() {
 
 function Main() {
   const [liked, setLiked] = useState<Doggy['id'][]>([1, 3]);
+  const [searchQuery, setSearchQuery] = useState<string>('Hello');
 
   return (
     <main>
       <LikedContext.Provider value={{ liked, setLiked }}>
         <div className="mt-24 grid gap-8 sm:grid-cols-2">
-          <Search />
+          <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
           <Shortlist doggies={doggies} />
         </div>
-        <Doggieslist doggies={doggies} />
+        <Doggieslist searchQuery={searchQuery} doggies={doggies} />
       </LikedContext.Provider>
       <DoggiesForm />
     </main>

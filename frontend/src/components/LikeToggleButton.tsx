@@ -1,6 +1,6 @@
 import { Heart } from 'lucide-react';
 import { Doggy } from '../types';
-import { useLiked } from '../context/likedContext';
+import { useLiked } from '../context/LikedContext';
 
 export function LikeToggleButton({ id }: { id: Doggy['id'] }) {
   // called context to stay the logic here from button

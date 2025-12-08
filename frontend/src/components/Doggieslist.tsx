@@ -4,13 +4,23 @@ import { LikeToggleButton } from './LikeToggleButton';
 
 // need pass props to render the data
 //called type annotation here but different syntax
-export function Doggieslist({ doggies }: { doggies: Doggy[] }) {
+export function Doggieslist({
+  doggies,
+  searchQuery,
+}: {
+  doggies: Doggy[];
+  searchQuery: string;
+}) {
   return (
     <ul className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {/* iterating using map() like dito niya ibabato yung data */}
-      {doggies.map((doggy) => (
-        <DoggyCard key={doggy.id} doggy={doggy} />
-      ))}
+      {doggies
+        .filter((dog) =>
+          dog.trait.toLowerCase().includes(searchQuery.toLowerCase())
+        )
+        .map((doggy) => (
+          <DoggyCard key={doggy.id} doggy={doggy} />
+        ))}
     </ul>
   );
 }

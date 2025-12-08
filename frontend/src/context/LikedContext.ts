@@ -6,7 +6,7 @@ export const LikedContext = createContext<{
   setLiked: Dispatch<SetStateAction<Doggy['id'][]>> | null;
 }>(null);
 
-// custom hook you can export and used in other component
+// custom hook you can export and use in other component
 export function useLiked() {
   const context = use(LikedContext);
   if (!context) {
