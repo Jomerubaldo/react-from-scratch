@@ -1,16 +1,11 @@
-import { Dispatch, SetStateAction } from 'react';
+import { useLiked } from '../context/likedContext';
 import { Doggy } from '../types';
 import { X } from 'lucide-react';
 
-export function Shortlist({
-  liked,
-  setLiked,
-  doggies,
-}: {
-  liked: Doggy['id'][];
-  setLiked: Dispatch<SetStateAction<Doggy['id'][]>>;
-  doggies: Doggy[];
-}) {
+export function Shortlist({ doggies }: { doggies: Doggy[] }) {
+  // called context here to stay at logic from button and iterate the map
+  const { liked, setLiked } = useLiked();
+
   return (
     <div>
       <h2 className="flex items-center gap-2 font-medium">

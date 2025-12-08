@@ -8,6 +8,7 @@ import { DoggiesForm } from './components/DoggyForm';
 import { doggies } from './data/doggies';
 import { useState } from 'react';
 import { Doggy } from './types';
+import { LikedContext } from './context/likedContext';
 
 export default function App() {
   return (
@@ -25,11 +26,13 @@ function Main() {
 
   return (
     <main>
-      <div className="mt-24 grid gap-8 sm:grid-cols-2">
-        <Search />
-        <Shortlist liked={liked} setLiked={setLiked} doggies={doggies} />
-      </div>
-      <Doggieslist doggies={doggies} liked={liked} setLiked={setLiked} />
+      <LikedContext.Provider value={{ liked, setLiked }}>
+        <div className="mt-24 grid gap-8 sm:grid-cols-2">
+          <Search />
+          <Shortlist doggies={doggies} />
+        </div>
+        <Doggieslist doggies={doggies} />
+      </LikedContext.Provider>
       <DoggiesForm />
     </main>
   );

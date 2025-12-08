@@ -1,29 +1,15 @@
 // import type from types folder to used the type for this component
-import { Dispatch, SetStateAction } from 'react';
 import { type Doggy } from '../types/index';
 import { LikeToggleButton } from './LikeToggleButton';
 
 // need pass props to render the data
 //called type annotation here but different syntax
-export function Doggieslist({
-  doggies,
-  liked,
-  setLiked,
-}: {
-  doggies: Doggy[];
-  liked: Doggy['id'][];
-  setLiked: Dispatch<SetStateAction<Doggy['id'][]>>;
-}) {
+export function Doggieslist({ doggies }: { doggies: Doggy[] }) {
   return (
     <ul className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {/* iterating using map() like dito niya ibabato yung data */}
       {doggies.map((doggy) => (
-        <DoggyCard
-          key={doggy.id}
-          doggy={doggy}
-          liked={liked}
-          setLiked={setLiked}
-        />
+        <DoggyCard key={doggy.id} doggy={doggy} />
       ))}
     </ul>
   );
@@ -33,12 +19,10 @@ export function Doggieslist({
 // make doggy name props and Doggy we export earlier but its have allready types value
 type DoggyCardProps = {
   doggy: Doggy;
-  liked: Doggy['id'][];
-  setLiked: Dispatch<SetStateAction<Doggy['id'][]>>; //resuasble Doggy
 };
 
 // called DoggyCardProps
-function DoggyCard({ doggy, liked, setLiked }: DoggyCardProps) {
+function DoggyCard({ doggy }: DoggyCardProps) {
   return (
     <li
       key={doggy.id}
@@ -56,7 +40,7 @@ function DoggyCard({ doggy, liked, setLiked }: DoggyCardProps) {
           <p className="text-slate-500">{doggy.trait}</p>
         </div>
         {/* need to className with group to work group-hover */}
-        <LikeToggleButton id={doggy.id} liked={liked} setLiked={setLiked} />
+        <LikeToggleButton id={doggy.id} />
       </div>
     </li>
   );
