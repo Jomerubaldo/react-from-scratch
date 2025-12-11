@@ -1,16 +1,27 @@
-export function DoggiesForm() {
+import { Dispatch, SetStateAction } from 'react';
+import { Doggy } from '../types';
+
+export function DoggiesForm({
+  doggies,
+  setDoggies,
+}: {
+  doggies: Doggy[];
+  setDoggies: Dispatch<SetStateAction<Doggy[]>>;
+}) {
   return (
     <div className="mt-12 flex items-center justify-between bg-white p-8 shadow ring ring-black/35">
       <form
+        //buildin preventDefault
         action={(formData: FormData) => {
-          console.log(Object.fromEntries(formData));
+          const newDoggy: Doggy = {
+            id: doggies.length + 1,
+            name: formData.get('name') as string,
+            trait: formData.get('trait') as string,
+            image: `/public/${doggies.length + 1}.jpg`, //need to fix this issue
+          };
+
+          setDoggies([...doggies, newDoggy]);
         }}
-        // 2nd option
-        // onSubmit={(e) => {
-        //   e.preventDefault();
-        // const formData = new FormData(e.currentTarget); //guaranteed sa form e.currentTarget
-        //   console.log(Object.fromEntries(formData));
-        // }}
         className="mt-4 flex w-full flex-col items-start gap-4"
       >
         <div className="grid w-full gap-6 md:grid-cols-3">

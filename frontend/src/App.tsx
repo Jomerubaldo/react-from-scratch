@@ -5,7 +5,7 @@ import { Search } from './components/Search';
 import { Shortlist } from './components/Shortlist';
 import { Doggieslist } from './components/Doggieslist';
 import { DoggiesForm } from './components/DoggyForm';
-import { doggies } from './data/doggies';
+import { doggies as doggiesData } from './data/doggies';
 import { useState } from 'react';
 import { Doggy } from './types';
 import { LikedContext } from './context/LikedContext';
@@ -23,7 +23,8 @@ export default function App() {
 
 function Main() {
   const [liked, setLiked] = useState<Doggy['id'][]>([1, 3]);
-  const [searchQuery, setSearchQuery] = useState<string>('Hello');
+  const [searchQuery, setSearchQuery] = useState<string>('');
+  const [doggies, setDoggies] = useState<Doggy[]>(doggiesData);
 
   return (
     <main>
@@ -34,7 +35,7 @@ function Main() {
         </div>
         <Doggieslist searchQuery={searchQuery} doggies={doggies} />
       </LikedContext.Provider>
-      <DoggiesForm />
+      <DoggiesForm setDoggies={setDoggies} doggies={doggies} />
     </main>
   );
 }
