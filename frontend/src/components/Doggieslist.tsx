@@ -49,7 +49,6 @@ function DoggyCard({ doggy }: DoggyCardProps) {
           <span className="text-slate-300">.</span>
           <p className="text-slate-500">{doggy.trait}</p>
         </div>
-        {/* need to className with group to work group-hover */}
         <LikeToggleButton id={doggy.id} />
       </div>
     </li>

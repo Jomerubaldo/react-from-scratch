@@ -7,39 +7,39 @@ export const doggies: Doggy[] = [
     id: 1,
     name: 'Akita',
     trait: 'So Sweet',
-    image: '/public/Akita.jpg',
+    image: '/public/1.jpg',
   },
   {
     id: 2,
     name: 'Alaskan',
     trait: 'Very good boi',
-    image: '/public/Alaskan.jpg',
+    image: '/public/2.jpg',
   },
 
   {
     id: 3,
     name: 'Affenpinscher',
     trait: 'Enjoys naps',
-    image: '/public/Affenpinscher.jpg',
+    image: '/public/3.jpg',
   },
 
   {
     id: 4,
     name: 'Beagle',
     trait: 'Loves cheese',
-    image: '/public/Beagle.jpg',
+    image: '/public/4.jpg',
   },
   {
     id: 5,
     name: 'Bichon',
     trait: 'Ready to save the world',
-    image: '/public/Bichon.jpg',
+    image: '/public/5.jpg',
   },
 
   {
     id: 6,
     name: 'Bloodhound',
     trait: 'Ready for anything',
-    image: '/public/Bloodhound.jpg',
+    image: '/public/6.jpg',
   },
 ];
