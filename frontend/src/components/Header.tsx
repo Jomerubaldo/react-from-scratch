@@ -15,7 +15,7 @@ export function Header() {
           <p className="text-lg font-semibold">Doggy</p>
         </div>
       </a>
-      {/* Hero copy */}
+      {/* Hero */}
       <div className="mt-6">
         <h1 className="text-lg font-bold">We've got the best doggies!</h1>
         <p className="text-slate-600">
