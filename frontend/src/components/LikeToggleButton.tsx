@@ -17,7 +17,7 @@ export function LikeToggleButton({ id }: { id: Doggy['id'] }) {
         }
       }}
     >
-      {/* maganda si lucide-react kasi pwede ka mag apply ng logic mismo sa component nya */}
+      {/* maganda si lucide-react kasi pwede ka mag apply ng logic mismo sa loob ng component nya */}
       <Heart
         className={
           liked.includes(id)

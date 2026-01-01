@@ -19,7 +19,6 @@ export function DoggiesForm({
             trait: formData.get('trait') as string,
             image: `/public/${doggies.length + 1}.jpg`, //need to fix this issue
           };
-
           setDoggies([...doggies, newDoggy]);
         }}
         className="mt-4 flex w-full flex-col items-start gap-4"
