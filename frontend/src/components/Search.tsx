@@ -24,7 +24,7 @@ export function Search({
           onChange={(event) => setSearchQuery(event.target.value)}
           name="search"
           type="text"
-          className="w-full max-w-80 bg-white px-4 py-2 ring ring-black focus:ring-2
+          className="w-full max-w-80 bg-white px-4 py-2 ring ring-black/5 focus:ring-1
            focus:ring-cyan-500 focus:outline-none"
         />
         {/* inputRef for every delete user focus on input text */}

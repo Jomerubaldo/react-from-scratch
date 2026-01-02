@@ -22,7 +22,7 @@ export default function App() {
 }
 
 function Main() {
-  const [liked, setLiked] = useState<Doggy['id'][]>([1, 3]);
+  const [liked, setLiked] = useState<Doggy['id'][]>([1, 3, 5]);
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [doggies, setDoggies] = useState<Doggy[]>(doggiesData);
 

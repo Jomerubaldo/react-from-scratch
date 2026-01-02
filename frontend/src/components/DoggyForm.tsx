@@ -9,7 +9,7 @@ export function DoggiesForm({
   setDoggies: Dispatch<SetStateAction<Doggy[]>>;
 }) {
   return (
-    <div className="mt-12 flex items-center justify-between bg-white p-8 shadow ring ring-black/35">
+    <div className="mt-12 flex items-center justify-between bg-white p-8 shadow ring ring-black/5">
       <form
         //buildin preventDefault
         action={(formData: FormData) => {
@@ -17,7 +17,7 @@ export function DoggiesForm({
             id: doggies.length + 1,
             name: formData.get('name') as string,
             trait: formData.get('trait') as string,
-            image: `/public/${doggies.length + 1}.jpg`, //need to fix this issue
+            image: `/public/${doggies.length + 1}.jpg`,
           };
           setDoggies([...doggies, newDoggy]);
         }}
