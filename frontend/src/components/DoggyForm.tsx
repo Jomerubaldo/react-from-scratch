@@ -17,7 +17,7 @@ export function DoggiesForm({
             id: doggies.length + 1,
             name: formData.get('name') as string,
             trait: formData.get('trait') as string,
-            image: `/public/${doggies.length + 1}.jpg`,
+            imagePath: `/public/${doggies.length + 1}.jpg`,
           };
           setDoggies([...doggies, newDoggy]);
         }}

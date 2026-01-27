@@ -4,5 +4,5 @@ export type Doggy = {
   id: number;
   name: string;
   trait: string;
-  image: string;
+  imagePath: string;
 };

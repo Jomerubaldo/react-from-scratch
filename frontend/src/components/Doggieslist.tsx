@@ -41,7 +41,7 @@ function DoggyCard({ doggy }: DoggyCardProps) {
       <img
         className="aspect-square object-cover h-[415px]"
         alt={doggy.name}
-        src={doggy.image}
+        src={doggy.imagePath}
       />
       <div className="gap flex items-center justify-between p-4 text-sm">
         <div className="flex items-center gap-2">
