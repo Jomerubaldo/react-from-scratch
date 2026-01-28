@@ -9,6 +9,7 @@ export function Doggieslist({
   searchQuery,
 }: {
   doggies: Doggy[];
+  x;
   searchQuery: string;
 }) {
   return (

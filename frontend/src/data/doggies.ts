@@ -15,14 +15,12 @@ export const doggies: Doggy[] = [
     trait: 'Very good boi',
     imagePath: '/public/2.jpg',
   },
-
   {
     id: 3,
     name: 'Affenpinscher',
     trait: 'Enjoys naps',
     imagePath: '/public/3.jpg',
   },
-
   {
     id: 4,
     name: 'Beagle',
@@ -35,7 +33,6 @@ export const doggies: Doggy[] = [
     trait: 'Ready to save the world',
     imagePath: '/public/5.jpg',
   },
-
   {
     id: 6,
     name: 'Bloodhound',

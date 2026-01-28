@@ -29,6 +29,7 @@ export function DoggiesForm({
             <input
               className="max-w-96 rounded-sm bg-white px-2 py-1 ring
              ring-black/20 focus:ring-2 focus:ring-cyan-500 focus:outline-none"
+              required
               id="name"
               type="text"
               name="name"
@@ -39,6 +40,7 @@ export function DoggiesForm({
             <input
               className="max-w-96 rounded-sm bg-white px-2 py-1 ring
              ring-black/20 focus:ring-2 focus:ring-cyan-500 focus:outline-none"
+              required
               id="trait"
               type="text"
               name="trait"
