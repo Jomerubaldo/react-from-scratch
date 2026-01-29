@@ -18,7 +18,7 @@ export function Shortlist({ doggies }: { doggies: Doggy[] }) {
           .map((doggy) => (
             <li
               key={doggy.id}
-              className="relative flex items-center overflow-clip rounded-md bg-white shadow-sm ring ring-black/5 transition duration-100 starting:scale-0 starting:opacity-0"
+              className="relative flex items-center overflow-clip rounded-md bg-white shadow-sm ring ring-black/50 transition duration-100 starting:scale-0 starting:opacity-0"
             >
               <img
                 height={32}

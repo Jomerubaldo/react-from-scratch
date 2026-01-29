@@ -9,7 +9,6 @@ export function Doggieslist({
   searchQuery,
 }: {
   doggies: Doggy[];
-  x;
   searchQuery: string;
 }) {
   return (
@@ -37,7 +36,7 @@ function DoggyCard({ doggy }: DoggyCardProps) {
   return (
     <li
       key={doggy.id}
-      className="overflow-clip rounded-lg bg-white shadow-md ring ring-black/5 hover:-translate-y-0.5"
+      className="overflow-clip rounded-lg bg-white shadow-md ring ring-black/50 hover:-translate-y-0.5"
     >
       <img
         className="aspect-square object-cover h-[415px]"
