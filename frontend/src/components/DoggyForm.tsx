@@ -15,11 +15,11 @@ export function DoggiesForm({
         //buildin preventDefault
         action={async (formData: FormData) => {
           // sleep(1.5s)
-          await new Promise((resolve) => setTimeout(resolve, 1500)); 
+          await new Promise((resolve) => setTimeout(resolve, 1500));
           const newDoggy: Doggy = {
             id: doggies.length + 1,
             name: formData.get('name') as string,
-            trait: formData.get('trait') as string, 
+            trait: formData.get('trait') as string,
             imagePath: `/public/${Math.floor(Math.random() * 16) + 7}.jpg`, //random image from 7-22
           };
           setDoggies([...doggies, newDoggy]);
