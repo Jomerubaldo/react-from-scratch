@@ -6,7 +6,7 @@ import { Shortlist } from './components/Shortlist';
 import { Doggieslist } from './components/Doggieslist';
 import { DoggiesForm } from './components/DoggyForm';
 import { doggies as doggiesData } from './data/doggies';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Doggy } from './types';
 import { LikedContext } from './context/LikedContext';
 
@@ -28,6 +28,7 @@ function Main() {
 
   return (
     <main>
+      <ApiDoggies />
       <LikedContext.Provider value={{ liked, setLiked }}>
         <div className="mt-24 grid gap-8 sm:grid-cols-2">
           <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
@@ -38,4 +39,18 @@ function Main() {
       <DoggiesForm setDoggies={setDoggies} doggies={doggies} />
     </main>
   );
+}
+
+function ApiDoggies() {
+  // TODO: fetch doggies from API
+  useEffect(() => {
+
+  }, [
+    // re-run the effect when component mounts
+  ])
+  return (
+    <div className="bg-white mt-12 p-8 shadow ring ring-black/5">
+      <p>Api Doggies</p>
+    </div>
+  );  
 }
