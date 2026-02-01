@@ -38,5 +38,3 @@ export function LikeToggleButton({ id }: { id: Doggy['id'] }) {
     </button>
   );
 }
-
-// 3mins and 36secs from video in laracast video
